@@ -1,3 +1,4 @@
+import { PlacesService } from './places.service';
 import { FoodService } from './food.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -11,12 +12,18 @@ export class PlacesPage implements OnInit {
 
   places = [];
 
-  constructor(private foodService: FoodService) { }
+  constructor(private placesService: PlacesService) { }
 
   ngOnInit() {
-    //cuando ha cargado la pagina
+    //cuando ha cargado la pagina por PRIMERA VEZ
 
-    this.places = this.foodService.getAll();
+    this.places = this.placesService.getAll();
+
+  }
+
+  ionViewWillEnter(){
+    //cuando el componente va  volver a pintarse. Es decir, luego de la primera vez
+    this.places = this.placesService.getAll();
   }
 
 }

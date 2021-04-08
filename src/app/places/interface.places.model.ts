@@ -1,4 +1,4 @@
-export interface IFood{
+export interface Places{
   id: string;
   title: string;
   imgURL: string;

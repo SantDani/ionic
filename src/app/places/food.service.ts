@@ -1,5 +1,5 @@
 // import { FoodService } from './food.service';
-import { IFood } from './interface.food.model';
+import { Places } from './interface.places.model';
 import { Injectable } from '@angular/core';
 
 
@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 })
 export class FoodService {
 
-  public foods: IFood[] = [
+  public foods: Places[] = [
     {
       id: '1',
       title: 'hamburgesa',
@@ -32,13 +32,19 @@ export class FoodService {
       title: 'hamburgesa',
       imgURL: 'https://unbuendiaenbarcelona.com/wp-content/uploads/2020/01/ubdeb-new-york-burger.jpg',
       comments: ['No jds que hambre', 'full gordura wey']
+    },
+    {
+      id: '5',
+      title: 'hamburgesa',
+      imgURL: 'https://unbuendiaenbarcelona.com/wp-content/uploads/2020/01/ubdeb-new-york-burger.jpg',
+      comments: []
     }
 
   ]
   constructor() { }
 
   // getAll(){ return this.foods;  }
-  getAll(){ return [...this.foods];  }
+  getAll(){ return [...this.foods];  } //retrun a copy from this.foods
 
   get(foodId: string){
 
