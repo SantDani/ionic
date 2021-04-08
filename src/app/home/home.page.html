@@ -7,8 +7,19 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-text>
-    mi primera app wey
-  </ion-text>
+
+    <ion-list >
+      <ion-card *ngFor="let photo of this.photos" class="ion-no-margin" >
+        <ion-title class="ion-text-center">{{photo.title}}</ion-title>
+        <a [href]="photo.url" target="_blank" >
+          <img [src]="photo.url" [alt]="photo.title">
+        </a>
+        <ion-card-content>
+
+            <a [href]="photo.url" target="_blank" > Abrir imagen en mayor calidad.</a>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
 
 </ion-content>

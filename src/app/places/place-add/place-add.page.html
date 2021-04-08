@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref='/places' color='dark'></ion-back-button>
+    </ion-buttons>
+    <ion-title>Añade un nuevo lugar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-row>
+  <ion-col>
+    <ion-card>
+      <!-- #title : identifica el input. Obtienes todo el HTML -->
+      <ion-input type="text" placeholder="Nombre del sitio" #title></ion-input>
+      <ion-input type="text" placeholder="https://exemplo-sitio.com" #imageURL></ion-input>
+      <ion-button color="primary" (click)="addNewPlace(title, imageURL)"> Send</ion-button>
+
+    </ion-card>
+  </ion-col>
+</ion-row>
+</ion-content>
