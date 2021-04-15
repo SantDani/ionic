@@ -1,0 +1,13 @@
+{
+  "appId": "com.food.app",
+  "appName": "ionic-food",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
